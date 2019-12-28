@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307CFF23B7BC1C00FF228E /* AppDelegate.swift */; };
 		09307D0223B7BC1C00FF228E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D0123B7BC1C00FF228E /* SceneDelegate.swift */; };
-		09307D0723B7BC1C00FF228E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0523B7BC1C00FF228E /* Main.storyboard */; };
 		09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0823B7BC1F00FF228E /* Assets.xcassets */; };
 		09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */; };
 		09307D1723B7BC1F00FF228E /* ForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D1623B7BC1F00FF228E /* ForecastTests.swift */; };
@@ -20,6 +19,8 @@
 		09307D4323B7D86200FF228E /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4223B7D86200FF228E /* WeekView.swift */; };
 		09307D4523B7D89600FF228E /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4423B7D89600FF228E /* DayView.swift */; };
 		09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D4623B7DB3100FF228E /* WeekView.storyboard */; };
+		09307D4923B7DD8400FF228E /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4823B7DD8400FF228E /* WSManager.swift */; };
+		09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4A23B7E37300FF228E /* WSForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		09307CFC23B7BC1C00FF228E /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09307CFF23B7BC1C00FF228E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09307D0123B7BC1C00FF228E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09307D0623B7BC1C00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09307D0823B7BC1F00FF228E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09307D0B23B7BC1F00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09307D0D23B7BC1F00FF228E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		09307D4223B7D86200FF228E /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		09307D4423B7D89600FF228E /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		09307D4623B7DB3100FF228E /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = "<group>"; };
+		09307D4823B7DD8400FF228E /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
+		09307D4A23B7E37300FF228E /* WSForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSForecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,8 @@
 		09307CFE23B7BC1C00FF228E /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */,
 				09307D3323B7CA0400FF228E /* AppDelegate */,
-				09307D3123B7C90C00FF228E /* Storyboard */,
 				09307D3023B7C8B400FF228E /* WebServices */,
 				09307D3423B7D54D00FF228E /* Modules */,
 				09307D3223B7C93700FF228E /* Extensions */,
@@ -149,17 +151,10 @@
 		09307D3023B7C8B400FF228E /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				09307D4823B7DD8400FF228E /* WSManager.swift */,
+				09307D4A23B7E37300FF228E /* WSForecast.swift */,
 			);
 			path = WebServices;
-			sourceTree = "<group>";
-		};
-		09307D3123B7C90C00FF228E /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				09307D0523B7BC1C00FF228E /* Main.storyboard */,
-				09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		09307D3223B7C93700FF228E /* Extensions */ = {
@@ -354,7 +349,6 @@
 				09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */,
 				09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */,
 				09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */,
-				09307D0723B7BC1C00FF228E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,11 +375,13 @@
 			files = (
 				09307D4523B7D89600FF228E /* DayView.swift in Sources */,
 				09307D3F23B7D80600FF228E /* WeekVM.swift in Sources */,
+				09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */,
 				09307D4323B7D86200FF228E /* WeekView.swift in Sources */,
 				09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */,
 				09307D0223B7BC1C00FF228E /* SceneDelegate.swift in Sources */,
 				09307D3923B7D70200FF228E /* ForecastByHour.swift in Sources */,
 				09307D4123B7D81100FF228E /* DayVM.swift in Sources */,
+				09307D4923B7DD8400FF228E /* WSManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,14 +417,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		09307D0523B7BC1C00FF228E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09307D0623B7BC1C00FF228E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
