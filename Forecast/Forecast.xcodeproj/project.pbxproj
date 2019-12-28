@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307CFF23B7BC1C00FF228E /* AppDelegate.swift */; };
 		09307D0223B7BC1C00FF228E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D0123B7BC1C00FF228E /* SceneDelegate.swift */; };
-		09307D0423B7BC1C00FF228E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D0323B7BC1C00FF228E /* ViewController.swift */; };
 		09307D0723B7BC1C00FF228E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0523B7BC1C00FF228E /* Main.storyboard */; };
 		09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0823B7BC1F00FF228E /* Assets.xcassets */; };
 		09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */; };
 		09307D1723B7BC1F00FF228E /* ForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D1623B7BC1F00FF228E /* ForecastTests.swift */; };
 		09307D2223B7BC1F00FF228E /* ForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D2123B7BC1F00FF228E /* ForecastUITests.swift */; };
+		09307D3923B7D70200FF228E /* ForecastByHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D3823B7D70200FF228E /* ForecastByHour.swift */; };
+		09307D3F23B7D80600FF228E /* WeekVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D3E23B7D80600FF228E /* WeekVM.swift */; };
+		09307D4123B7D81100FF228E /* DayVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4023B7D81100FF228E /* DayVM.swift */; };
+		09307D4323B7D86200FF228E /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4223B7D86200FF228E /* WeekView.swift */; };
+		09307D4523B7D89600FF228E /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4423B7D89600FF228E /* DayView.swift */; };
+		09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D4623B7DB3100FF228E /* WeekView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		09307CFC23B7BC1C00FF228E /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09307CFF23B7BC1C00FF228E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09307D0123B7BC1C00FF228E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09307D0323B7BC1C00FF228E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09307D0623B7BC1C00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09307D0823B7BC1F00FF228E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09307D0B23B7BC1F00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		09307D1D23B7BC1F00FF228E /* ForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09307D2123B7BC1F00FF228E /* ForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastUITests.swift; sourceTree = "<group>"; };
 		09307D2323B7BC1F00FF228E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09307D3823B7D70200FF228E /* ForecastByHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastByHour.swift; sourceTree = "<group>"; };
+		09307D3E23B7D80600FF228E /* WeekVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekVM.swift; sourceTree = "<group>"; };
+		09307D4023B7D81100FF228E /* DayVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayVM.swift; sourceTree = "<group>"; };
+		09307D4223B7D86200FF228E /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		09307D4423B7D89600FF228E /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		09307D4623B7DB3100FF228E /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,12 @@
 		09307CFE23B7BC1C00FF228E /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
-				09307CFF23B7BC1C00FF228E /* AppDelegate.swift */,
-				09307D0123B7BC1C00FF228E /* SceneDelegate.swift */,
-				09307D0323B7BC1C00FF228E /* ViewController.swift */,
-				09307D0523B7BC1C00FF228E /* Main.storyboard */,
-				09307D0823B7BC1F00FF228E /* Assets.xcassets */,
-				09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */,
+				09307D3323B7CA0400FF228E /* AppDelegate */,
+				09307D3123B7C90C00FF228E /* Storyboard */,
+				09307D3023B7C8B400FF228E /* WebServices */,
+				09307D3423B7D54D00FF228E /* Modules */,
+				09307D3223B7C93700FF228E /* Extensions */,
+				09307D2F23B7C87900FF228E /* Resources */,
 				09307D0D23B7BC1F00FF228E /* Info.plist */,
 			);
 			path = Forecast;
@@ -126,6 +136,115 @@
 				09307D2323B7BC1F00FF228E /* Info.plist */,
 			);
 			path = ForecastUITests;
+			sourceTree = "<group>";
+		};
+		09307D2F23B7C87900FF228E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09307D0823B7BC1F00FF228E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		09307D3023B7C8B400FF228E /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		09307D3123B7C90C00FF228E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				09307D0523B7BC1C00FF228E /* Main.storyboard */,
+				09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		09307D3223B7C93700FF228E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09307D3323B7CA0400FF228E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				09307CFF23B7BC1C00FF228E /* AppDelegate.swift */,
+				09307D0123B7BC1C00FF228E /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		09307D3423B7D54D00FF228E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				09307D3523B7D64F00FF228E /* Model */,
+				09307D3623B7D65800FF228E /* ViewModel */,
+				09307D3723B7D66400FF228E /* View */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		09307D3523B7D64F00FF228E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09307D3823B7D70200FF228E /* ForecastByHour.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09307D3623B7D65800FF228E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09307D3A23B7D71700FF228E /* Week */,
+				09307D3B23B7D79D00FF228E /* Day */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09307D3723B7D66400FF228E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09307D3D23B7D7B800FF228E /* Week */,
+				09307D3C23B7D7B200FF228E /* Day */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09307D3A23B7D71700FF228E /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				09307D3E23B7D80600FF228E /* WeekVM.swift */,
+			);
+			path = Week;
+			sourceTree = "<group>";
+		};
+		09307D3B23B7D79D00FF228E /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				09307D4023B7D81100FF228E /* DayVM.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		09307D3C23B7D7B200FF228E /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				09307D4423B7D89600FF228E /* DayView.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		09307D3D23B7D7B800FF228E /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				09307D4623B7DB3100FF228E /* WeekView.storyboard */,
+				09307D4223B7D86200FF228E /* WeekView.swift */,
+			);
+			path = Week;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */,
+				09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */,
 				09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */,
 				09307D0723B7BC1C00FF228E /* Main.storyboard in Resources */,
 			);
@@ -259,9 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09307D0423B7BC1C00FF228E /* ViewController.swift in Sources */,
+				09307D4523B7D89600FF228E /* DayView.swift in Sources */,
+				09307D3F23B7D80600FF228E /* WeekVM.swift in Sources */,
+				09307D4323B7D86200FF228E /* WeekView.swift in Sources */,
 				09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */,
 				09307D0223B7BC1C00FF228E /* SceneDelegate.swift in Sources */,
+				09307D3923B7D70200FF228E /* ForecastByHour.swift in Sources */,
+				09307D4123B7D81100FF228E /* DayVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeekView.swift
 //  Forecast
 //
 //  Created by Sebastien Gohier on 28/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WeekView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +17,3 @@ class ViewController: UIViewController {
 
 
 }
-
