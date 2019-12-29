@@ -12,7 +12,7 @@ import CoreLocation
 struct WSForecast {
     
     func getForecastList(completion: @escaping ([ForecastByHour]?) -> ()) {
-        let coordinate = CLLocationCoordinate2D(latitude: 48.85341, longitude: 2.3488)
+        let coordinate = LocationManager.shared.location
         
         getForecastListServer(at: coordinate) { result in
             switch result {

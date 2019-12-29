@@ -54,6 +54,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>WeekView</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow location access to fetch weather forecast in your city.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
