@@ -12,7 +12,11 @@ class WeekView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        WSForecast().getForecastList() { list in
+            guard let list = list else { return }
+            print(list)
+        }
     }
 
 
