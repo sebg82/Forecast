@@ -22,6 +22,7 @@
 		09307D4923B7DD8400FF228E /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4823B7DD8400FF228E /* WSManager.swift */; };
 		09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4A23B7E37300FF228E /* WSForecast.swift */; };
 		09307D8123B8D15300FF228E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D8023B8D15300FF228E /* LocationManager.swift */; };
+		09307D8A23B8F07D00FF228E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D8823B8F07D00FF228E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		09307D4823B7DD8400FF228E /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		09307D4A23B7E37300FF228E /* WSForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSForecast.swift; sourceTree = "<group>"; };
 		09307D8023B8D15300FF228E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		09307D8923B8F07D00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		09307CFE23B7BC1C00FF228E /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				09307D8823B8F07D00FF228E /* Main.storyboard */,
 				09307D0A23B7BC1F00FF228E /* LaunchScreen.storyboard */,
 				09307D3323B7CA0400FF228E /* AppDelegate */,
 				09307D3023B7C8B400FF228E /* WebServices */,
@@ -360,6 +363,7 @@
 				09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */,
 				09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */,
 				09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */,
+				09307D8A23B8F07D00FF228E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +439,14 @@
 				09307D0B23B7BC1F00FF228E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		09307D8823B8F07D00FF228E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09307D8923B8F07D00FF228E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

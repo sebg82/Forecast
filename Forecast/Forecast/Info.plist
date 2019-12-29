@@ -45,7 +45,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>WeekView</string>
+					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
@@ -53,7 +53,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>WeekView</string>
+    <string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please allow location access to fetch weather forecast in your city.</string>
 	<key>UIRequiredDeviceCapabilities</key>
