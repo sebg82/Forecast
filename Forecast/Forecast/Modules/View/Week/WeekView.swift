@@ -52,6 +52,9 @@ extension WeekView: UITableViewDataSource {
 extension WeekView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // TODO router
+        let controller = DayView(nibName: "DayView", bundle: nil)
+        controller.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
