@@ -10,10 +10,14 @@ import UIKit
 
 class WeekView: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var isRefreshing = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.registerReusable(WeekViewCell.self)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: LocationManager.shared.notificationName, object: nil)
     }
@@ -30,4 +34,27 @@ class WeekView: UIViewController {
         }
     }
     
+}
+
+extension WeekView: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: WeekViewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
+    }
+    
+}
+
+extension WeekView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO router
+        let controller = DayView(nibName: "DayView", bundle: nil)
+        controller.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
