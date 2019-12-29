@@ -9,15 +9,25 @@
 import UIKit
 
 class WeekView: UIViewController {
+    
+    var isRefreshing = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: LocationManager.shared.notificationName, object: nil)
+    }
+    
+    /// Handler to observe notification events from LocationManager.
+    @objc private func locationAvailable(notification: Notification) {
+        guard !isRefreshing else { return }
+        
+        isRefreshing = true
         WSForecast().getForecastList() { list in
             guard let list = list else { return }
             print(list)
+            self.isRefreshing = false
         }
     }
-
-
+    
 }

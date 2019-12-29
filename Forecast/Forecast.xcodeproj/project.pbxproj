@@ -21,6 +21,7 @@
 		09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D4623B7DB3100FF228E /* WeekView.storyboard */; };
 		09307D4923B7DD8400FF228E /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4823B7DD8400FF228E /* WSManager.swift */; };
 		09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4A23B7E37300FF228E /* WSForecast.swift */; };
+		09307D8123B8D15300FF228E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D8023B8D15300FF228E /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		09307D4623B7DB3100FF228E /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = "<group>"; };
 		09307D4823B7DD8400FF228E /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		09307D4A23B7E37300FF228E /* WSForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSForecast.swift; sourceTree = "<group>"; };
+		09307D8023B8D15300FF228E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				09307D3323B7CA0400FF228E /* AppDelegate */,
 				09307D3023B7C8B400FF228E /* WebServices */,
 				09307D3423B7D54D00FF228E /* Modules */,
+				09307D7F23B8D13D00FF228E /* Manager */,
 				09307D3223B7C93700FF228E /* Extensions */,
 				09307D2F23B7C87900FF228E /* Resources */,
 				09307D0D23B7BC1F00FF228E /* Info.plist */,
@@ -240,6 +243,14 @@
 				09307D4223B7D86200FF228E /* WeekView.swift */,
 			);
 			path = Week;
+			sourceTree = "<group>";
+		};
+		09307D7F23B8D13D00FF228E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				09307D8023B8D15300FF228E /* LocationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 			files = (
 				09307D4523B7D89600FF228E /* DayView.swift in Sources */,
 				09307D3F23B7D80600FF228E /* WeekVM.swift in Sources */,
+				09307D8123B8D15300FF228E /* LocationManager.swift in Sources */,
 				09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */,
 				09307D4323B7D86200FF228E /* WeekView.swift in Sources */,
 				09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */,
