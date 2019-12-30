@@ -11,17 +11,19 @@ import Foundation
 
 struct ForecastByHour {
 
+    var date: Date
     var temperature: Double
     var pluie: Double
     var humidite: Double
     var ventMoyen: Double
-    var nebulosite: Int
+    var nebulosite: Double
 
-    init(attributes: [String: Any]) {
+    init(_ date: Date, attributes: [String: Any]) {
+        self.date = date
         self.temperature = (attributes["temperature"] as! [String:Double])["2m"]!
         self.pluie = attributes["pluie"] as! Double
         self.humidite = (attributes["humidite"] as! [String:Double])["2m"]!
         self.ventMoyen = (attributes["vent_moyen"] as! [String:Double])["10m"]!
-        self.nebulosite = (attributes["nebulosite"] as! [String:Int])["totale"]!
+        self.nebulosite = (attributes["nebulosite"] as! [String:Double])["totale"]!
     }
 }

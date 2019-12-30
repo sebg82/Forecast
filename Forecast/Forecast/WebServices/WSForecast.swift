@@ -32,10 +32,10 @@ struct WSForecast {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let results = dic?.compactMap { (key, value) -> ForecastByHour? in
-            guard dateFormatter.date(from: key) != nil,
+            guard let date = dateFormatter.date(from: key),
                 let attributes = value as? [String:Any]
                 else { return nil }
-            return ForecastByHour(attributes: attributes)
+            return ForecastByHour(date, attributes: attributes)
         }
         
         return results
