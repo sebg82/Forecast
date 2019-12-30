@@ -22,6 +22,19 @@ class ForecastTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let viewModel = WeekVM()
+        viewModel.reloadTable = {
+            XCTAssertEqual(viewModel.numberOfRows, 9, "There is 9 weather forecast days")
+            
+            let dayVM = viewModel.dayVM(for: IndexPath(row: 0, section: 0))
+            XCTAssertEqual(dayVM.getTemperature(), "4 ºC", "The temperature is 4 degrees")
+        }
+        viewModel.selected = { dayVM in
+            XCTAssertEqual(dayVM.getHumidite(), "54 %", "The humidity is 54 percent")
+        }
+        viewModel.refreshScreen()
+        viewModel.didSelectRowAt(IndexPath(row: 1, section: 0))
+
     }
 
     func testPerformanceExample() {

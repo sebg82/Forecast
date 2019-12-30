@@ -12,8 +12,14 @@ import CoreLocation
 struct WSForecast {
     
     func getForecastList(completion: @escaping ([ForecastByHour]?) -> ()) {
-        let coordinate = LocationManager.shared.location
         
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            self.getForecastListMock() { result in
+                completion(self.convert(result))
+            }
+        }
+        
+        let coordinate = LocationManager.shared.location
         getForecastListServer(at: coordinate) { result in
             switch result {
             case nil:
@@ -64,6 +70,14 @@ struct WSForecast {
     func getForecastListLocal(at coordinate: CLLocationCoordinate2D, completion: @escaping ([String:AnyObject]?) -> ()) {
         guard let filePath = filePath(for: coordinate),
             let result = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [String:AnyObject]
+            else { return completion(nil) }
+        
+        completion(result)
+    }
+    
+    func getForecastListMock(completion: @escaping ([String:AnyObject]?) -> ()) {
+        guard let mockPath = self.filePathMock(),
+            let result = NSKeyedUnarchiver.unarchiveObject(withFile: mockPath) as? [String:AnyObject]
             else { return completion(nil) }
         
         completion(result)

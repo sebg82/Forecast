@@ -30,6 +30,9 @@ class ForecastUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.navigationBars["Forecast.WeekView"].buttons["Refresh"].tap()
+        app.tables.cells.firstMatch.tap()
+        app.navigationBars["Forecast.DayView"].buttons["Back"].tap()
     }
 
     func testLaunchPerformance() {
