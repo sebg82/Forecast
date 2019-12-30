@@ -22,7 +22,7 @@ class WeekView: UIViewController {
         observeEvents()
     }
     
-    /// Function to observe various event call backs from the viewmodel as well as Notifications.
+    /// Function to observe call backs from the viewmodel
     private func observeEvents() {
         viewModel.reloadTable = { [weak self] in
             DispatchQueue.main.async {
@@ -40,7 +40,6 @@ class WeekView: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: LocationManager.shared.notificationName, object: nil)
     }
     
-    /// Refresh the screen when refresh button is pressed.
     @objc private func refreshScreen() {
         isRefreshing = true
         viewModel.refreshScreen()

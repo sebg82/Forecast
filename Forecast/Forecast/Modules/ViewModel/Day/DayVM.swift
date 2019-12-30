@@ -12,12 +12,12 @@ import Foundation
 class DayVM {
     
     private var data: [ForecastByHour]
-    var date: Date
-    var temperature: Double
-    var pluie: Double
-    var humidite: Double
-    var ventMoyen: Double
-    var nebulosite: Double
+    private var date: Date
+    private var temperature: Double
+    private var pluie: Double
+    private var humidite: Double
+    private var ventMoyen: Double
+    private var nebulosite: Double
         
     init(_ data: [ForecastByHour]) {
         self.data = data
@@ -29,4 +29,37 @@ class DayVM {
         self.ventMoyen = data.reduce(0.0, {$0 + $1.ventMoyen}) / count
         self.nebulosite = data.reduce(0.0, {$0 + $1.nebulosite}) / count
     }
+    
+    func getDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: date)
+    }
+    
+    func getTemperature() -> String {
+        return String(format: "%.f ºC", temperature - 273.15)
+    }
+
+    func getPluie() -> String {
+        return String(format: "%.f mm", pluie * 10)
+    }
+
+    func getHumidite() -> String {
+        return String(format: "%.f %%", humidite )
+    }
+
+    func getVentMoyen() -> String {
+        return String(format: "%.f m/s", ventMoyen)
+    }
+
+    func getNebulosite() -> String {
+        switch nebulosite {
+        case 0..<30: return "ensoleillé"
+        case 30..<60: return "nuageux"
+        default: return "très nuageux"
+        }
+    }
+
 }

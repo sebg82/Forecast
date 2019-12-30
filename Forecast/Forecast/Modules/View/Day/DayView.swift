@@ -21,20 +21,16 @@ class DayView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let viewModel = viewModel else { return }
         configure(viewModel)
     }
 
-    func configure(_ viewModel: DayVM?) {
-        guard let viewModel = viewModel else { return }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale.current
-        date.text = dateFormatter.string(from: viewModel.date)
-        temperature.text = String(format: "%.2f", (viewModel.temperature - 32) * 5 / 9)
-        pluie.text = String(format: "%.2f", viewModel.pluie)
-        humidite.text = String(format: "%.2f", viewModel.humidite)
-        ventMoyen.text = String(format: "%.2f", viewModel.ventMoyen)
-        nebulosite.text = String(format: "%.2f", viewModel.nebulosite)
+    func configure(_ viewModel: DayVM) {
+        date.text = viewModel.getDate()
+        temperature.text = viewModel.getTemperature()
+        pluie.text = viewModel.getPluie()
+        humidite.text = viewModel.getHumidite()
+        ventMoyen.text = viewModel.getVentMoyen()
+        nebulosite.text = viewModel.getNebulosite()
     }
 }

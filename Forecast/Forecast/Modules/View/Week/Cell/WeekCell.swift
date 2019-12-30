@@ -16,21 +16,13 @@ final class WeekCell: UITableViewCell, Nibable {
     @IBOutlet weak var humidite: UILabel!
     @IBOutlet weak var ventMoyen: UILabel!
     @IBOutlet weak var nebulosite: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     func configure(_ viewModel: DayVM) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale.current
-        date.text = dateFormatter.string(from: viewModel.date)
-        temperature.text = String(format: "%.2f", (viewModel.temperature - 32) * 5 / 9)
-        pluie.text = String(format: "%.2f", viewModel.pluie)
-        humidite.text = String(format: "%.2f", viewModel.humidite)
-        ventMoyen.text = String(format: "%.2f", viewModel.ventMoyen)
-        nebulosite.text = String(format: "%.2f", viewModel.nebulosite)
+        date.text = viewModel.getDate()
+        temperature.text = viewModel.getTemperature()
+        pluie.text = viewModel.getPluie()
+        humidite.text = viewModel.getHumidite()
+        ventMoyen.text = viewModel.getVentMoyen()
+        nebulosite.text = viewModel.getNebulosite()
     }
 }

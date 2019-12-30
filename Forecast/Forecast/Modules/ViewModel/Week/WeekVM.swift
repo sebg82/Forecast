@@ -39,8 +39,10 @@ class WeekVM {
                 }
                 listByDay[strDay]?.append(forecastByHour)
             })
-            let data = listByDay.map{ DayVM($0.value) }
-            self?.data = data.sorted(by: { $0.date.compare($1.date) == .orderedAscending })
+            let data = listByDay
+                .sorted(by: { $0.key < $1.key })
+                .map{ DayVM($0.value) }
+            self?.data = data
             self?.numberOfRows = data.count
             self?.reloadTable()
         }
