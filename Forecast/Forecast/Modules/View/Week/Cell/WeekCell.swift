@@ -1,14 +1,14 @@
 //
-//  DayView.swift
+//  WeekCell.swift
 //  Forecast
 //
-//  Created by Sebastien Gohier on 28/12/2019.
+//  Created by Sebastien Gohier on 29/12/2019.
 //  Copyright © 2019 Sebastien Gohier. All rights reserved.
 //
 
 import UIKit
 
-class DayView: UIViewController {
+final class WeekCell: UITableViewCell, Nibable {
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var temperature: UILabel!
@@ -16,16 +16,12 @@ class DayView: UIViewController {
     @IBOutlet weak var humidite: UILabel!
     @IBOutlet weak var ventMoyen: UILabel!
     @IBOutlet weak var nebulosite: UILabel!
-    
-    var viewModel: DayVM?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure(viewModel)
-    }
 
-    func configure(_ viewModel: DayVM?) {
-        guard let viewModel = viewModel else { return }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func configure(_ viewModel: DayVM) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none

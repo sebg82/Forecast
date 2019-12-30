@@ -23,11 +23,11 @@
 		09307D4B23B7E37300FF228E /* WSForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D4A23B7E37300FF228E /* WSForecast.swift */; };
 		09307D8123B8D15300FF228E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D8023B8D15300FF228E /* LocationManager.swift */; };
 		09307D8A23B8F07D00FF228E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09307D8823B8F07D00FF228E /* Main.storyboard */; };
-		09307D8D23B8F73100FF228E /* WeekViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09307D8C23B8F73100FF228E /* WeekViewCell.xib */; };
+		09307D8D23B8F73100FF228E /* WeekCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09307D8C23B8F73100FF228E /* WeekCell.xib */; };
 		09307D8F23B8F84A00FF228E /* UITableView_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D8E23B8F84A00FF228E /* UITableView_Extensions.swift */; };
 		09307D9223B8FACC00FF228E /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D9123B8FACC00FF228E /* Identifiable.swift */; };
 		09307D9423B8FB0100FF228E /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D9323B8FB0100FF228E /* Nibable.swift */; };
-		09307D9623B8FC2500FF228E /* WeekViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D9523B8FC2500FF228E /* WeekViewCell.swift */; };
+		09307D9623B8FC2500FF228E /* WeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09307D9523B8FC2500FF228E /* WeekCell.swift */; };
 		09307D9B23B90DC000FF228E /* DayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09307D9A23B90DC000FF228E /* DayView.xib */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +71,11 @@
 		09307D4A23B7E37300FF228E /* WSForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSForecast.swift; sourceTree = "<group>"; };
 		09307D8023B8D15300FF228E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		09307D8923B8F07D00FF228E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09307D8C23B8F73100FF228E /* WeekViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekViewCell.xib; sourceTree = "<group>"; };
+		09307D8C23B8F73100FF228E /* WeekCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekCell.xib; sourceTree = "<group>"; };
 		09307D8E23B8F84A00FF228E /* UITableView_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView_Extensions.swift; sourceTree = "<group>"; };
 		09307D9123B8FACC00FF228E /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		09307D9323B8FB0100FF228E /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
-		09307D9523B8FC2500FF228E /* WeekViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewCell.swift; sourceTree = "<group>"; };
+		09307D9523B8FC2500FF228E /* WeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCell.swift; sourceTree = "<group>"; };
 		09307D9A23B90DC000FF228E /* DayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,8 +248,8 @@
 		09307D3C23B7D7B200FF228E /* Day */ = {
 			isa = PBXGroup;
 			children = (
-				09307D4423B7D89600FF228E /* DayView.swift */,
 				09307D9A23B90DC000FF228E /* DayView.xib */,
+				09307D4423B7D89600FF228E /* DayView.swift */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -257,9 +257,9 @@
 		09307D3D23B7D7B800FF228E /* Week */ = {
 			isa = PBXGroup;
 			children = (
-				09307D8B23B8F6ED00FF228E /* Cell */,
 				09307D4623B7DB3100FF228E /* WeekView.storyboard */,
 				09307D4223B7D86200FF228E /* WeekView.swift */,
+				09307D8B23B8F6ED00FF228E /* Cell */,
 			);
 			path = Week;
 			sourceTree = "<group>";
@@ -275,8 +275,8 @@
 		09307D8B23B8F6ED00FF228E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				09307D8C23B8F73100FF228E /* WeekViewCell.xib */,
-				09307D9523B8FC2500FF228E /* WeekViewCell.swift */,
+				09307D8C23B8F73100FF228E /* WeekCell.xib */,
+				09307D9523B8FC2500FF228E /* WeekCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 			files = (
 				09307D0C23B7BC1F00FF228E /* LaunchScreen.storyboard in Resources */,
 				09307D9B23B90DC000FF228E /* DayView.xib in Resources */,
-				09307D8D23B8F73100FF228E /* WeekViewCell.xib in Resources */,
+				09307D8D23B8F73100FF228E /* WeekCell.xib in Resources */,
 				09307D4723B7DB3100FF228E /* WeekView.storyboard in Resources */,
 				09307D0923B7BC1F00FF228E /* Assets.xcassets in Resources */,
 				09307D8A23B8F07D00FF228E /* Main.storyboard in Resources */,
@@ -434,7 +434,7 @@
 				09307D0023B7BC1C00FF228E /* AppDelegate.swift in Sources */,
 				09307D0223B7BC1C00FF228E /* SceneDelegate.swift in Sources */,
 				09307D9423B8FB0100FF228E /* Nibable.swift in Sources */,
-				09307D9623B8FC2500FF228E /* WeekViewCell.swift in Sources */,
+				09307D9623B8FC2500FF228E /* WeekCell.swift in Sources */,
 				09307D3923B7D70200FF228E /* ForecastByHour.swift in Sources */,
 				09307D4123B7D81100FF228E /* DayVM.swift in Sources */,
 				09307D4923B7DD8400FF228E /* WSManager.swift in Sources */,
@@ -613,6 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PT6DW2A7XF;
 				INFOPLIST_FILE = Forecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,6 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PT6DW2A7XF;
 				INFOPLIST_FILE = Forecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
